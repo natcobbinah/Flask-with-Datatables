@@ -32,12 +32,12 @@ makes it ideal for processing and displaying large quantities in the frontend of
 The database is already pre-populated with (5000 records)  in the **app.py** file with dummy data found in **dummy_data.py**
 
 After cloning the application, create an (.env) file in the root of the application containg the following fields to properly setup your application
-     `
+     
      FLASK_DEBUG=true
      SECRET_KEY=<generated your secret key here>
      SQLALCHEMY_DATABASE_URI=sqlite:///userinfoDB.db
      SQLALCHEMY_TRACK_MODIFICATIONS=False
-     `
+     
 
      Generating secret: https://docs.python.org/3/library/secrets.html#module-secrets
      TLDR: python >>> import secrets
