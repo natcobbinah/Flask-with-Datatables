@@ -7,7 +7,7 @@ import random
 def prepopulate_userinfo_table():
     stmt_userinfos = []
 
-    for i in range(500_000):
+    for i in range(5000):
 
         user_random_value = random.random()
         user_random_age = random.randint(1, 150)

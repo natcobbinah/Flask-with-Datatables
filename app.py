@@ -32,7 +32,6 @@ with app.app_context():
     for table in truncate_tables:
         db.session.execute(table)
         db.session.commit()
-    db.create_all()
 
     prepopulate_userinfo_table()
 

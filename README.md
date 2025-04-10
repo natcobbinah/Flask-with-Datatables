@@ -29,7 +29,20 @@ makes it ideal for processing and displaying large quantities in the frontend of
 7. Users can also search for new records, by typing in their query in the search bar of datatables, which in turn sends the request to the backend, processes the search query and returns the relevant result.
 
 [NOTE]
-The database is already pre-populated with records in the **app.py** file with dummy data found in **dummy_data.py**
+The database is already pre-populated with (5000 records)  in the **app.py** file with dummy data found in **dummy_data.py**
+
+After cloning the application, create an (.env) file in the root of the application containg the following fields to properly setup your application
+     `
+     FLASK_DEBUG=true
+     SECRET_KEY=<generated your secret key here>
+     SQLALCHEMY_DATABASE_URI=sqlite:///userinfoDB.db
+     SQLALCHEMY_TRACK_MODIFICATIONS=False
+     `
+
+     Generating secret: https://docs.python.org/3/library/secrets.html#module-secrets
+     TLDR: python >>> import secrets
+                  >>> print(secrets.token_urlsafe())
+     Copy generated secret to SECRET_KEY field
 
 Libraries Used:
 1.   pip install Flask
