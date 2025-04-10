@@ -28,6 +28,19 @@ makes it ideal for processing and displaying large quantities in the frontend of
    backend-server and redraws the records in the datatables
 7. Users can also search for new records, by typing in their query in the search bar of datatables, which in turn sends the request to the backend, processes the search query and returns the relevant result.
 
+[NOTE]
+The database is already pre-populated with records in the **app.py** file with dummy data found in **dummy_data.py**
+
+Libraries Used:
+1.   pip install Flask
+     https://flask.palletsprojects.com/en/stable/installation/
+     
+2.   pip install environs
+     URL: https://github.com/sloria/environs
+     
+3.   pip install -U Flask-SQLAlchemy
+     URL: https://flask-sqlalchemy.readthedocs.io/en/stable/quickstart/#installation
+
 ## Sample Screenshot of Running application
 Retrieve paginated records
 ![datatables-rendering example](https://github.com/user-attachments/assets/949dc1e9-dafa-49fc-8705-a61c86fe0d6d)
