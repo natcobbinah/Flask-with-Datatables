@@ -31,7 +31,7 @@ makes it ideal for processing and displaying large quantities in the frontend of
 [NOTE]
 The database is already pre-populated with (5000 records)  in the **app.py** file with dummy data found in **dummy_data.py**
 
-After cloning the application, create an (.env) file in the root of the application containg the following fields to properly setup your application
+After cloning the application, create an (.env) file in the root of the application containing the following fields to properly setup your application
      
      FLASK_DEBUG=true
      SECRET_KEY=<generated your secret key here>
@@ -44,6 +44,40 @@ After cloning the application, create an (.env) file in the root of the applicat
                   >>> print(secrets.token_urlsafe())
      Copy generated secret to SECRET_KEY field
 
+     -------------
+     
+     With application environment variables loaded using:
+     
+     > app.config.from_object("flaskr_medium.settings")
+
+     Either create a folder **flaskr_medium** and copy the cloned application file contents within it,
+     to load the **defined environment variables** or replace **flaskr_medium** name, with the name of
+     your folder containing the cloned project, in order to load the **defined environment variables**
+     
+     --------------
+
+     Using a virtual environment to run the application:
+
+     > https://docs.python.org/3/library/venv.html
+
+     On the terminal of the cloned application directory:
+     > python -m venv .venv
+     
+     Then:
+
+     On windows systems:
+     > .venv/Scripts/activate
+     
+     On MAC OSX/LINUX 
+     > source .venv/bin/activate
+
+     This activates the python virtual environment, and you can proceed to install the required,
+     libraries manually, individually or install all libraries used in developing the application
+     from **requirements.txt** file as:
+     
+     > pip install -r requirements.txt
+
+   
 Libraries Used:
 1.   pip install Flask
      https://flask.palletsprojects.com/en/stable/installation/
@@ -53,6 +87,10 @@ Libraries Used:
      
 3.   pip install -U Flask-SQLAlchemy
      URL: https://flask-sqlalchemy.readthedocs.io/en/stable/quickstart/#installation
+
+4.   pip install black
+     URL: https://black.readthedocs.io/en/stable/
+
 
 ## Sample Screenshot of Running application
 Retrieve paginated records
