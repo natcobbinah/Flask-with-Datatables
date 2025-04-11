@@ -1,4 +1,4 @@
-## Flask-with-Datatables (Server-Side Rendering)
+## Flask-with-Datatables (Server-Side Processing)
 
 With the goal of Datatables library (https://datatables.net/) being to enhance HTML tables, providing built-in features supporting pagination, searching, multi-column ordering, easily theme-able etc, it
 provides support for two modes of processing data.
@@ -9,7 +9,7 @@ provides support for two modes of processing data.
 Both has its advantages and disadvantages, however in dealing with very large records, forexample, 100,000 rows of records, it is advisable to use server-side processing, so the server does the heavy lifting 
 of serving data as it is requested from the frontend, as the browser cannot support large records or quantity of data at once because it has a limited amount of memory in loading records to the Browser Window.
 
-## Server-side Rendering with Flask and SQL-Alchemy
+## Datatables Server-side Processing using Flask and SQL-Alchemy
 Flask as a lightweight WSGI web application, provides the minimal tools such as WSGI toolkit, CLICK CLI toolkit and Jinja template, for writing our backend applications as well as being able to render HTML with
 its in-built Jinja template.
 
