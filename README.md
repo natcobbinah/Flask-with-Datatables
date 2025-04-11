@@ -20,13 +20,18 @@ makes it ideal for processing and displaying large quantities in the frontend of
 
 ## Process-Flow
 1. **render_template** from the  Flask class,  renders an html template, thus when the application starts,  the **homepage endpoint** renders our **index.html** file
+   
 2. Custom ajax datatables javascript file found in **static/js folder**, upon **index.html being rendered** makes a **POST-request** to the appropriate endpoint **(user_records endpoint)** found in **blueprint_routes folder**
+ 
 3. If **user records are available in our database**, the **ORM queries** are executed which fetches and returns the relevant data as **JSON payload** to the frontend, else if no records are
-   available, default **JSON Payload** is also returned as well. 
-5. With the available data, datatables renders the records in its table
-6. Pagination buttons automatically provided with datatables, can be interacted with, depending on how the data is paginated, and on each paginated button click, datatables makes  post request to retrieve new data from the
+   available, default **JSON Payload** is also returned as well.
+   
+4. With the available data, datatables renders the records in its table
+ 
+5. Pagination buttons automatically provided with datatables, can be interacted with, depending on how the data is paginated, and on each paginated button click, datatables makes  post request to retrieve new data from the
    backend-server and redraws the records in the datatables
-7. Users can also search for new records, by typing in their query in the search bar of datatables, which in turn sends the request to the backend, processes the search query and returns the relevant result.
+   
+6. Users can also search for new records, by typing in their query in the search bar of datatables, which in turn sends the request to the backend, processes the search query and returns the relevant result.
 
 [NOTE]
 The database is already pre-populated with (5000 records)  in the **app.py** file with dummy data found in **dummy_data.py**
